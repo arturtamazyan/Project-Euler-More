@@ -1,0 +1,36 @@
+int fibonacciEvenNumbers = 0;
+
+
+var fibonacciNumbers = new List<int> {1 , 1};
+while (fibonacciNumbers.Last() < 4000000)
+{
+    int fibinacciFirst = fibonacciNumbers[fibonacciNumbers.Count - 1] ;
+
+    int fibinacciSecond = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+    fibonacciNumbers.Add(fibinacciFirst+fibinacciSecond);
+    
+}
+if (fibonacciNumbers.Last() > 4000000)
+{
+    fibonacciNumbers.RemoveAt(fibonacciNumbers.Count - 1);
+}
+
+Console.WriteLine(fibonacciNumbers.Last());
+
+
+for (int index = 0; index < fibonacciNumbers.Count; index++)
+
+{
+
+    if (fibonacciNumbers[index] % 2 == 0)
+    {
+        fibonacciEvenNumbers = fibonacciEvenNumbers + fibonacciNumbers[index];
+    }
+    
+        
+}
+Console.WriteLine(fibonacciEvenNumbers);
+
+
+
