@@ -1,0 +1,30 @@
+//Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum//
+
+var numbers = new List<int> {1};
+
+int sumOfSq = 0;
+
+int sqOfSum = 0;
+
+
+
+while (numbers.Last() != 100)
+{
+    numbers.Add(numbers.Last() + 1);
+}
+
+foreach (var item in numbers)
+{
+    sumOfSq = sumOfSq + item;
+}
+sumOfSq = sumOfSq * sumOfSq;
+
+
+
+foreach (var item in numbers)
+{
+    sqOfSum = sqOfSum + item * item;
+}
+
+
+Console.WriteLine( sumOfSq - sqOfSum); 
