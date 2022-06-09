@@ -1,0 +1,21 @@
+//What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+int a = 1;
+
+int b = 1;
+
+while (a < 20)
+{
+    
+    if (b % a == 0)
+    {
+
+        a++;
+    }
+    else
+    {
+        b++;
+        a = 1;
+    }
+
+}
+Console.WriteLine(b);
