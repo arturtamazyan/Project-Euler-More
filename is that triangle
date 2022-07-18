@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include<cs50.h>
+
+int  is_that_triangle(int a, int b, int c);
+
+
+int main(void)
+{
+
+
+int a1 = get_int("Lenght of 1st side: \n");
+
+int b1 = get_int("Lenght of 2nd side: \n");
+
+int c1 = get_int("Lenght of 3rd side: \n");
+
+int answer = is_that_triangle(a1 ,b1, c1);
+
+if (answer==0)
+
+printf("oops...\nYou can't make triangle with this sides \n ");
+
+else
+printf("Everything is right.\nYou can make triangle with this sides \n");
+
+}
+
+
+int is_that_triangle(int a, int b, int c)
+{
+
+
+if((a  || b   || c ) <= 0 )
+{
+    return 0;
+}
+
+else if (a+b <= c || a+c <= b || b+c <= a )
+{
+    return 0;
+}
+ else
+ return 1;
+
+}
